@@ -39,4 +39,4 @@ model.save('model/model.keras')
 # Save the scaler
 with open('Model/scaler.pkl', 'wb') as file:
     pickle.dump(scaler, file)
-print("Scaler has been saved as 'Model/scaler.pkl'")
+print("Scaler has been saved as 'model/scaler.pkl'")
