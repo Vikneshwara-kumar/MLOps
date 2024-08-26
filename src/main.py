@@ -34,7 +34,7 @@ reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=5, min_lr
 history = model.fit(X_train, Y_train, epochs=epochs, batch_size=batch_size, validation_split=validation_split, callbacks=[early_stopping, reduce_lr])
 
 # Save the model
-model.save('Model/model.keras')
+model.save('model/model.keras')
 
 # Save the scaler
 with open('Model/scaler.pkl', 'wb') as file:
