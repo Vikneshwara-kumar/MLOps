@@ -16,7 +16,7 @@ epochs = 30
 validation_split = 0.1
 
 # File paths and columns
-file_path = '/root/MLOps/Dataset/Dataset.csv'
+file_path = 'Dataset/Dataset.csv'
 feature_columns = ['RMS','MAV','SSC','WL','MNF','MDF','IMDF','IMPF','PSD','MNP','ZC','stft_feature_1','stft_feature_2','stft_feature_3','stft_feature_4','stft_feature_5','stft_feature_6']
 label_column = ['Label']
 
@@ -34,9 +34,9 @@ reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=5, min_lr
 history = model.fit(X_train, Y_train, epochs=epochs, batch_size=batch_size, validation_split=validation_split, callbacks=[early_stopping, reduce_lr])
 
 # Save the model
-model.save('/root/MLOps/Model/model.keras')
+model.save('Model/model.keras')
 
 # Save the scaler
-with open('/root/MLOps/Model/scaler.pkl', 'wb') as file:
+with open('Model/scaler.pkl', 'wb') as file:
     pickle.dump(scaler, file)
 print("Scaler has been saved as 'Model/scaler.pkl'")
