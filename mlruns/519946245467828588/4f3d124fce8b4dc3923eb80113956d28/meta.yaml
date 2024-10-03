@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/519946245467828588/4f3d124fce8b4dc3923eb80113956d28/artifacts
+deleted_time: 1725890906882
+end_time: 1725841859154
+entry_point_name: ''
+experiment_id: '519946245467828588'
+lifecycle_stage: deleted
+run_id: 4f3d124fce8b4dc3923eb80113956d28
+run_name: bouncy-koi-537
+run_uuid: 4f3d124fce8b4dc3923eb80113956d28
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725841566907
+status: 3
+tags: []
+user_id: root

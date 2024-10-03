@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/102385796951572705/82a3a25546a34403bc854b6a95191a35/artifacts
+end_time: 1725840853832
+entry_point_name: ''
+experiment_id: '102385796951572705'
+lifecycle_stage: active
+run_id: 82a3a25546a34403bc854b6a95191a35
+run_name: amusing-hen-425
+run_uuid: 82a3a25546a34403bc854b6a95191a35
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725840777724
+status: 3
+tags: []
+user_id: root

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/519946245467828588/7b602f96e2c94e3383ef60e2c10afa16/artifacts
+end_time: 1725891232545
+entry_point_name: ''
+experiment_id: '519946245467828588'
+lifecycle_stage: active
+run_id: 7b602f96e2c94e3383ef60e2c10afa16
+run_name: placid-stork-90
+run_uuid: 7b602f96e2c94e3383ef60e2c10afa16
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725890975720
+status: 3
+tags: []
+user_id: root

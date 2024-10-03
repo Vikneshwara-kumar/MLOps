@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/102385796951572705
+creation_time: 1725840777611
+experiment_id: '102385796951572705'
+last_update_time: 1725840777611
+lifecycle_stage: active
+name: MNIST Experiment

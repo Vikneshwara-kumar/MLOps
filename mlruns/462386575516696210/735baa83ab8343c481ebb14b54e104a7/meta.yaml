@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/462386575516696210/735baa83ab8343c481ebb14b54e104a7/artifacts
+end_time: 1725840252299
+entry_point_name: ''
+experiment_id: '462386575516696210'
+lifecycle_stage: active
+run_id: 735baa83ab8343c481ebb14b54e104a7
+run_name: thoughtful-snake-321
+run_uuid: 735baa83ab8343c481ebb14b54e104a7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725840247932
+status: 3
+tags: []
+user_id: root

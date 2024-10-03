@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/519946245467828588/c81e36f5a00f418eacd72ae8f8934f1c/artifacts
+end_time: 1725890072340
+entry_point_name: ''
+experiment_id: '519946245467828588'
+lifecycle_stage: active
+run_id: c81e36f5a00f418eacd72ae8f8934f1c
+run_name: delicate-kit-1
+run_uuid: c81e36f5a00f418eacd72ae8f8934f1c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725889760681
+status: 3
+tags: []
+user_id: root
