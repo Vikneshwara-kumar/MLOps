@@ -22,12 +22,12 @@ def train(file_path):
     model = build_model(input_shape=(X_train.shape[1], X_train.shape[2]))
 
     # Log hyperparameters
-    mlflow.log_param("C", 1.0)
-    mlflow.log_param("max_iter", 100)
-    mlflow.log_param("epochs", epochs)
-    mlflow.log_param("batch_size", batch_size)
-    mlflow.log_param("learning_rate", 0.001)
-    mlflow.log_param("loss", 0.001)
+    #mlflow.log_param("C", 1.0)
+    #mlflow.log_param("max_iter", 100)
+    #mlflow.log_param("epochs", epochs)
+    #mlflow.log_param("batch_size", batch_size)
+    #mlflow.log_param("learning_rate", 0.001)
+    #mlflow.log_param("loss", 0.001)
 
     # Callbacks
     early_stopping = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
@@ -40,9 +40,9 @@ def train(file_path):
     accuracy = evaluate(model, X_test, Y_test)
 
     # Log accuracy metric
-    mlflow.log_metric("accuracy", accuracy)
-    # Log the model as an artifact
-    mlflow.sklearn.log_model(model, "LSTM")
+    #mlflow.log_metric("accuracy", accuracy)
+    ## Log the model as an artifact
+    #mlflow.sklearn.log_model(model, "LSTM")
 
     # Save the model
     model.save('/root/MLOps/model/model.keras')
