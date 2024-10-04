@@ -45,6 +45,6 @@ def train(file_path):
     #mlflow.sklearn.log_model(model, "LSTM")
 
     # Save the model
-    model.save('/model.keras')
+    model.save('model.keras')
 
     return model, accuracy
