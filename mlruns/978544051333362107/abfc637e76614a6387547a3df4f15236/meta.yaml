@@ -1,0 +1,15 @@
+artifact_uri: file:///root/MLOps/mlruns/978544051333362107/abfc637e76614a6387547a3df4f15236/artifacts
+end_time: 1728069724056
+entry_point_name: ''
+experiment_id: '978544051333362107'
+lifecycle_stage: active
+run_id: abfc637e76614a6387547a3df4f15236
+run_name: marvelous-asp-598
+run_uuid: abfc637e76614a6387547a3df4f15236
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1728069723826
+status: 4
+tags: []
+user_id: root

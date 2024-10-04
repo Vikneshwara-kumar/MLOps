@@ -1,0 +1,15 @@
+artifact_uri: file:///root/MLOps/src/mlruns/535760248740696542/9366cc17a5c44f48a8077299922b8234/artifacts
+end_time: 1728070459753
+entry_point_name: ''
+experiment_id: '535760248740696542'
+lifecycle_stage: active
+run_id: 9366cc17a5c44f48a8077299922b8234
+run_name: able-hen-786
+run_uuid: 9366cc17a5c44f48a8077299922b8234
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1728070340225
+status: 3
+tags: []
+user_id: root

@@ -1,47 +1,50 @@
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense, Dropout
-from tensorflow.keras.optimizers import Adam
-import numpy as np
-from tensorflow.keras.models import Model
-from tensorflow.keras.layers import Input, Dense, Dropout, LayerNormalization, GlobalAveragePooling1D
-from tensorflow.keras.layers import MultiHeadAttention
-from tensorflow.keras import layers
+from sklearn.metrics import accuracy_score, confusion_matrix
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
-
-def build_model_lstm(input_shape, learning_rate=0.0001):
-    model = Sequential([
-        LSTM(128, input_shape=input_shape),
-        Dense(64, activation='relu'), 
-        Dense(4, activation='softmax')  # Output layer with 4 units for 4 classes and softmax activation
-    ])
-    
-    # Define the optimizer with a custom learning rate
-    optimizer = Adam(learning_rate=learning_rate)
-    
-    model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
-    return model
+import pickle
+from preprocessing import load_and_preprocess_data
+from build_model import build_model_lstm as build_model
+import mlflow
+import mlflow.sklearn
+from evaluate import evaluate 
 
 
-def build_model_Transformer(input_shape, num_classes, num_features, learning_rate=0.0001):
-    
-    # Transformer block
-    # For self-attention in transformers, query, key, and value are typically the same (the input)
-    attention_output = MultiHeadAttention(key_dim=num_features, num_heads=3)(input_shape, input_shape)
-    attention_output = Dropout(0.1)(attention_output)
-    attention_output = LayerNormalization(epsilon=1e-5)(attention_output + input_shape)  # Add & Norm
 
-    # Pooling layer to reduce sequence dimension
-    pooled_output = GlobalAveragePooling1D()(attention_output)
+def train(file_path):
+    # Define parameters
+    batch_size = 32
+    epochs = 1
+    validation_split = 0.1
 
-    # Fully connected layers
-    x = Dense(64, activation='relu')(pooled_output)
-    outputs = Dense(num_classes, activation='softmax')(x)  # Output layer for multi-class classification
+    # Load and preprocess data
+    X_train, X_test, Y_train, Y_test, scaler = load_and_preprocess_data(file_path)
 
-    # Create the model
-    model = Model(inputs=input_shape, outputs=outputs)
+    # Build the model
+    model = build_model(input_shape=(X_train.shape[1], X_train.shape[2]))
 
-    # Compile the model
-    optimizer = Adam(learning_rate)
-    model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
-    
-    return model
+    # Log hyperparameters
+    mlflow.log_param("C", 1.0)
+    mlflow.log_param("max_iter", 100)
+    mlflow.log_param("epochs", epochs)
+    mlflow.log_param("batch_size", batch_size)
+    mlflow.log_param("learning_rate", 0.001)
+    mlflow.log_param("loss", 0.001)
+
+    # Callbacks
+    early_stopping = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
+    reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=5, min_lr=0.001)
+
+    # Train the model
+    history = model.fit(X_train, Y_train, epochs=epochs, batch_size=batch_size, validation_split=validation_split, callbacks=[early_stopping, reduce_lr])
+
+    #Evaluate
+    accuracy = evaluate(model, X_test, Y_test)
+
+    # Log accuracy metric
+    mlflow.log_metric("accuracy", accuracy)
+    # Log the model as an artifact
+    mlflow.sklearn.log_model(model, "LSTM")
+
+    # Save the model
+    model.save('/root/MLOps/model/model.keras')
+
+    return model, accuracy

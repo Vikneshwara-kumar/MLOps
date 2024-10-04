@@ -1,0 +1,15 @@
+artifact_uri: file:///root/MLOps/src/mlruns/535760248740696542/9630559bbc7342eabce66005b221a554/artifacts
+end_time: 1728070092938
+entry_point_name: ''
+experiment_id: '535760248740696542'
+lifecycle_stage: active
+run_id: 9630559bbc7342eabce66005b221a554
+run_name: colorful-dolphin-862
+run_uuid: 9630559bbc7342eabce66005b221a554
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1728069982159
+status: 4
+tags: []
+user_id: root

@@ -1,0 +1,15 @@
+artifact_uri: file:///root/MLOps/src/mlruns/535760248740696542/efac70b5f80e4eae87ef75e5c03785dc/artifacts
+end_time: 1728070281719
+entry_point_name: ''
+experiment_id: '535760248740696542'
+lifecycle_stage: active
+run_id: efac70b5f80e4eae87ef75e5c03785dc
+run_name: rambunctious-hare-16
+run_uuid: efac70b5f80e4eae87ef75e5c03785dc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1728070162428
+status: 4
+tags: []
+user_id: root

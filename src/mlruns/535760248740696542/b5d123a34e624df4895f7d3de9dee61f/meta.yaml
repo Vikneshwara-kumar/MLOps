@@ -1,0 +1,15 @@
+artifact_uri: file:///root/MLOps/src/mlruns/535760248740696542/b5d123a34e624df4895f7d3de9dee61f/artifacts
+end_time: 1728069861340
+entry_point_name: ''
+experiment_id: '535760248740696542'
+lifecycle_stage: active
+run_id: b5d123a34e624df4895f7d3de9dee61f
+run_name: awesome-snake-965
+run_uuid: b5d123a34e624df4895f7d3de9dee61f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1728069747439
+status: 4
+tags: []
+user_id: root

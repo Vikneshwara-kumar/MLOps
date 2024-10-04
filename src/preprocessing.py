@@ -4,8 +4,13 @@ from sklearn.preprocessing import StandardScaler
 from tensorflow.keras.utils import to_categorical
 from sklearn.model_selection import train_test_split
 
-def load_and_preprocess_data(file_path, feature_columns, label_column, timesteps=30, num_classes=4):
+
+def load_and_preprocess_data(file_path):
     df = pd.read_csv(file_path)
+    feature_columns = ['RMS','MAV','SSC','WL','MNF','MDF','IMDF','IMPF','PSD','MNP','ZC','stft_feature_1','stft_feature_2','stft_feature_3','stft_feature_4','stft_feature_5','stft_feature_6']
+    label_column = ['Label']
+    timesteps=30
+    num_classes=4
 
     # Split the DataFrame into features (X) and target (y)
     X = df[feature_columns]

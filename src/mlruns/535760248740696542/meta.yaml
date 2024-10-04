@@ -1,0 +1,6 @@
+artifact_location: file:///root/MLOps/src/mlruns/535760248740696542
+creation_time: 1728069476591
+experiment_id: '535760248740696542'
+last_update_time: 1728069476591
+lifecycle_stage: active
+name: ml-ci-cd-github-experiment

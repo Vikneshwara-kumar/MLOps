@@ -1,0 +1,15 @@
+artifact_uri: file:///root/MLOps/mlruns/978544051333362107/a4854c50abc2425ba6de964ac958aab1/artifacts
+end_time: 1728070725677
+entry_point_name: ''
+experiment_id: '978544051333362107'
+lifecycle_stage: active
+run_id: a4854c50abc2425ba6de964ac958aab1
+run_name: worried-moose-99
+run_uuid: a4854c50abc2425ba6de964ac958aab1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1728070613139
+status: 3
+tags: []
+user_id: root
