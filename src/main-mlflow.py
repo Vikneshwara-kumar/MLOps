@@ -13,11 +13,11 @@ import joblib
 
 # Define parameters
 batch_size = 32
-epochs = 50
+epochs = 1
 validation_split = 0.1
 
 # File paths and columns
-file_path = 'Dataset/Dataset.csv'
+file_path = '/root/MLOps/Dataset/Dataset.csv'
 feature_columns = ['RMS','MAV','SSC','WL','MNF','MDF','IMDF','IMPF','PSD','MNP','ZC','stft_feature_1','stft_feature_2','stft_feature_3','stft_feature_4','stft_feature_5','stft_feature_6']
 label_column = ['Label']
 

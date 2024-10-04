@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/519946245467828588/d3683c8ec1574228a034d5bf78e1764b/artifacts
+end_time: 1728059818956
+entry_point_name: ''
+experiment_id: '519946245467828588'
+lifecycle_stage: active
+run_id: d3683c8ec1574228a034d5bf78e1764b
+run_name: upbeat-goose-162
+run_uuid: d3683c8ec1574228a034d5bf78e1764b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1728059703911
+status: 3
+tags: []
+user_id: root
