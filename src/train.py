@@ -2,7 +2,7 @@ import mlflow
 from model import train
 
 # File paths and columns
-file_path = '/root/MLOps/Dataset/Dataset.csv'
+file_path = '/MLOps/Dataset/Dataset.csv'
 
 if __name__ == "__main__":
 
