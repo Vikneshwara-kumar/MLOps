@@ -40,5 +40,5 @@ jobs:
         docker tag ml-ci-cd-github $DOCKER_USERNAME/ml-ci-cd-github
         docker push $DOCKER_USERNAME/ml-ci-cd-github
       env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        DOCKER_USERNAME: vicky84263
+        DOCKER_PASSWORD: Vicky@852
